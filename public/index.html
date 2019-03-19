@@ -1,85 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Meta Information -->
-    <title>Tweeter - Home Page</title>
+<head>
+  <!-- Meta Information -->
+  <title>Tweeter - Home Page</title>
 
-    <!-- External CSS -->
-    <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+  <!-- External CSS -->
+  <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
 
-    <!-- App CSS -->
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+  <!-- App CSS -->
+  <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
 
-    <!-- External JS -->
-    <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
+  <!-- External JS -->
+  <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
-    <!-- App JS -->
-    <script type="text/javascript" src="/scripts/app.js"></script><!-- App JS -->
+  <!-- App JS -->
+  <script type="text/javascript" src="/scripts/app.js"></script><!-- App JS -->
 
-    <!-- Character Counter JS -->
-    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+  <!-- Character Counter JS -->
+  <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 
-    <!-- Font -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,700,700i" rel="stylesheet">
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,700,700i" rel="stylesheet">
 
-    <!--Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+  <!--Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
 
-    <!-- Navbar CSS -->
-    <link rel="stylesheet" href="/styles/nav.css" type="text/css">
+  <!-- Navbar CSS -->
+  <link rel="stylesheet" href="/styles/nav.css" type="text/css">
 
-     <!-- New Tweet CSS -->
-    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css">
+  <!-- New Tweet CSS -->
+  <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css">
 
-  </head>
+</head>
 
-  <body>
+<body>
 
-    <!-- Top nav bar (fixed) -->
-    <nav id="nav-bar">
-      <img class="logo" src="/images/bird.png">
-      <span class="header">Tweeter</span>
-    </nav>
+  <!-- Top nav bar (fixed) -->
+  <nav id="nav-bar">
+    <img class="logo" src="/images/bird.png">
+    <span class="header">Tweeter</span>
+  </nav>
 
-    <!-- Page-specific (main) content here -->
-    <main class="container">
+  <!-- Page-specific (main) content here -->
+  <main class="container">
 
-      <section class="new-tweet">
-        <h2>Compose Tweet</h2>
-        <form method="POST" action="/tweets/">
-          <textarea name="text" placeholder="What are you humming about?"></textarea>
-          <input type="submit" value="Tweet">
-          <span class="counter">140</span>
-        </form>
-      </section>
+    <section class="new-tweet">
+      <h2>Compose Tweet</h2>
+      <form method="POST" action="/tweets/">
+        <textarea name="text" placeholder="What are you humming about?"></textarea>
+        <input type="submit" value="Tweet">
+        <span class="counter">140</span>
+      </form>
+    </section>
 
-      <section id = "tweet-container">
-        <article class ="tweet">
-          <header>
-              <div class="logo">
-                <a href="http://vanillicon.com"><img src="https://vanillicon.com/v2/d7ac4c0d41b22ccbe173f4d6cbf9b0ed.svg" /></a>
-                <h2> Bill Fields</h2>
-              </div>
-              <div class="handle">
-                @MrFields
-              </div>
-          </header>
-              <div class="text">
-                Little tweet here.
-              </div>
-          <footer>
-            <div class="text">
-              10 days ago
-            </div>
-            <div class="icons">
-              <i class="fa fa-flag" aria-hidden="true"></i>
-              <i class="fa fa-retweet" aria-hidden="true"></i>
-              <i class="fa fa-heart"></i>
-            </div>
-          </footer>
-        </article>
-      </section>
+    <section id= "tweet-container">
+      <article class="tweet">
+        <header>
+          <div class="logo">
+            <a href="http://vanillicon.com"><img src="https://vanillicon.com/v2/d7ac4c0d41b22ccbe173f4d6cbf9b0ed.svg" /></a>
+            <h2> Bill Fields</h2>
+          </div>
+          <div class="handle">
+            @MrFields
+          </div>
+        </header>
+        <div class="text">
+          Little tweet here.
+        </div>
+        <footer>
+          <div class="text">
+            10 days ago
+          </div>
+          <div class="icons">
+            <i class="fa fa-flag" aria-hidden="true"></i>
+            <i class="fa fa-retweet" aria-hidden="true"></i>
+            <i class="fa fa-heart"></i>
+          </div>
+        </footer>
+      </article>
+    </section>
 
-    </main>
-  </body>
+  </main>*
+</body>
 </html>
