@@ -61,10 +61,11 @@ body {
   align-items: flex-start;
 }
 
-img {
+.tweet img {
   height: 50px;
   width: 50px;
   border-radius: 7px;
+  opacity: 0.75;
 }
 
 .tweet h2 {
@@ -108,10 +109,8 @@ img {
 
 .tweet footer .icons {
   display: none;
-  display: flex;
   padding: 1em 1em 0 0;
 }
-
 
 
 .tweet:hover {
@@ -120,6 +119,10 @@ img {
 
 .tweet:hover header {
   background-color: #e0e0e0;
+}
+
+.tweet:hover img {
+  opacity: 1.5;
 }
 
 .tweet:hover h2 {
@@ -132,7 +135,6 @@ img {
 
 .tweet:hover .icons {
   display: flex;
-  display: inline-block;
   color: #00d8ff;
 }
 
