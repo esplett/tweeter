@@ -30,8 +30,110 @@ body {
   height: 800px;
 }
 
+.tweet {
+  background-color: white;
+  /*top/bottom left/right*/
+  margin: 2em 2em;
+  /*top, right, bottom, left */
+  padding: 0em 0em 0.75em 0em;
+  border-radius: 9px;
+  border: 1.5px solid #d6d6d6;
+}
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
+.tweet header {
+  background-color: #eee;
+  margin: 0 auto;
+  width: 100%;
+  height: 3em;
+  clear: both;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  padding-bottom: 60px;
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.tweet header .logo {
+  padding: 0em 0em 0em 0.75em;
+  display: flex;
+  align-items: flex-start;
+}
+
+img {
+  height: 50px;
+  width: 50px;
+  border-radius: 7px;
+}
+
+.tweet h2 {
+  margin: 0 0 0 0.5em;
+  color: #656565;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.tweet .handle {
+  padding: 0em 0.5em 0em 1em;
+  color: #656565;
+}
+
+.tweet .text {
+  margin: 0 auto;
+  /*top, right, bottom, left */
+  padding: 3em 1em 3em 1em;
+  width: 100%;
+}
+
+.tweet footer {
+  margin: 0 auto;
+  border-top: 1px solid #d6d6d6;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.tweet footer .text {
+  padding: 0.75em 1em 0 1em;
+  display: flex;
+  align-items: flex-start;
+}
+
+.tweet footer .fa {
+  padding: 0 3px 0 3px;
+}
+
+.tweet footer .icons {
+  display: none;
+  display: flex;
+  padding: 1em 1em 0 0;
+}
+
+
+
+.tweet:hover {
+  border: 2px solid #717171d4;
+}
+
+.tweet:hover header {
+  background-color: #e0e0e0;
+}
+
+.tweet:hover h2 {
+  color: black;
+}
+
+.tweet:hover .handle {
+  color: black;
+}
+
+.tweet:hover .icons {
+  display: flex;
+  display: inline-block;
+  color: #00d8ff;
+}
+
 

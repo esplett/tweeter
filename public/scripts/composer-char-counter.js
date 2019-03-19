@@ -15,7 +15,3 @@ $(document).ready(function() {
 });
 
 
-// parent method jQuery
-// use .find(.counter)
-// toggle class method for red counter
-
