@@ -9,7 +9,7 @@ $(document).ready(function() {
 
   function renderTweets(tweets) {
     $('#tweets-container').empty();
-      tweets.forEach(function(tweet){
+      tweets.reverse().forEach(function(tweet){
        // loop through and append each tweet
        var $tweet = createTweetElement(tweet);
         $('#tweets-container').append($tweet);
