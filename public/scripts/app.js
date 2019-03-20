@@ -29,7 +29,7 @@ $(document).ready(function() {
           </div>
         </header>
         <div class="tweet-text">
-            ${tweetData.content.text}
+          ${escape(tweetData.content.text)}
         </div>
         <footer>
           <div class="footer-text">
@@ -43,6 +43,13 @@ $(document).ready(function() {
         </footer>
       </article>
     </section>`)
+  }
+
+  //prevents XSS/Cross-Site Scripting
+  function escape(str) {
+    var div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
   }
 
   //AJAX POST request
