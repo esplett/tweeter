@@ -80,6 +80,13 @@ $(document).ready(function() {
 
   loadTweets();
 
+  //toggle on compose button
+  $("#compose").click(function(){
+    $(".new-tweet").slideToggle('slow');
+    $(".new-tweet textarea").focus();
+  });
+
+
 });
 
 
