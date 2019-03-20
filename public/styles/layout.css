@@ -27,7 +27,7 @@ body {
   margin: auto;
   width: 450px;
   background-color: white;
-  height: 800px;
+  min-height: 100%;
 }
 
 .tweet {
