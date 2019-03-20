@@ -25,5 +25,17 @@
   line-height: 5rem;
 }
 
+#nav-bar button {
+  float: right;
+  margin-top: 11px;
+  padding: 1em 0.5em 1em 0.5em;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: white;
+}
 
+#nav-bar button:hover {
+  background-color: #f4fff8f0;
+  color:  #00a087;
+}
 
