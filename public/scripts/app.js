@@ -94,9 +94,29 @@ function createTweetElement(tweetData) {
   </section>`)
   }
 
+  //   $(function() {
+  //   var $button = $('#submit');
+  //   $button.on('click', function () {
+  //     $.ajax('/tweets', { method: 'POST' })
+  //     //serialize method needs to serialize on form not button
+  //     $( "form" ).on( "submit", function( event ) {
+  //       event.preventDefault();
+  //       console.log( $( this ).serialize() );
+  //     });
+  //   });
+  // });
 
 
+  $(function() {
+    $( "form" ).on( "submit", function( event ) {
+        event.preventDefault();
+        console.log($( this ).serialize())
+        $.ajax('/tweets', { method: 'POST', data: $( this ).serialize() })
+      });
+
+  });
 
   renderTweets(data);
 
 });
+
