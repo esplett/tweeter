@@ -46,13 +46,20 @@ $(document).ready(function() {
   }
 
   //AJAX POST request
-
   $( "form" ).on( "submit", function( event ) {
     event.preventDefault();
-    $.ajax('/tweets', { method: 'POST', data: $( this ).serialize() })
-    .then(function (){
-      loadTweets()
-    });
+    var tweetText = $("textarea").val();
+    if (tweetText === "") {
+      alert("ERROR!!!!!!!!! Please enter text.");
+    } else if (tweetText.length >= 140) {
+      alert("ERROR!!!!!! Please enter less than 140 characters");
+    } else {
+      //serializes tweets
+      $.ajax('/tweets', { method: 'POST', data: $( this ).serialize() })
+      .then(function (){
+        loadTweets();
+      });
+    }
   });
 
   //AJAX GET request
@@ -65,18 +72,10 @@ $(document).ready(function() {
   }
 
   loadTweets();
-  renderTweets(data);
 
 });
 
 
 
 
-    // var tweetText = $("textarea").val()
-    // if  (tweetText === "") {
-    //   alert("ERROR!!!!!!!!! Please enter text.")
-    // } else if (tweetText.length >= 140) {
-    //   alert("ERROR!!!!!! Please enter less than 140 characters")
-    // } else {
-    //   //serializes tweets
-    // });
+
