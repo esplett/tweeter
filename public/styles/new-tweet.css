@@ -36,38 +36,46 @@
   color: red;
   }
 
-/*.error-message {
-  width: 80%;
-  margin: 0 auto;
-  margin-top: -69px;
-  margin-bottom: 30px;
-  padding: .5em 1em .5em 1em;
-  border: 1px solid #d6d6d6;
-  border-bottom-left-radius: 12px;
-  border-bottom-right-radius: 12px;
-  background-color: #ff000029;
-  color: #ff0000;
-
-
+.error-message {
   position: relative;
-  width: 340px;
-  line-height: 20px;
-  padding: 10px;
-  border-radius: 6px;
-  background: #727272;
-  color: #FFF;
-}*/
+  width: 85%;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  padding: 2em 0em 2em 0em;
+  border: 1px solid red;
+  border-radius: 40px;
+  background-color: #FF9D9D;
+  color: red;
+}
 
 /*add an arrow*/
-/*.error-message:before {
+.error-message::before {
     content: "";
-    display: block;
     position: absolute;
-    top: 16px;
-    left: -12px;
+    display: block;
+    top: -11px;
+    left: 170px;
     width: 0;
     height: 0;
-    border-top: 12px solid transparent;
-    border-bottom: 12px solid transparent;
-    border-right: 12px solid #727272;
-}*/
+    border-bottom: 12px solid #FF9D9D;
+    border-right: 12px solid transparent;
+    border-left: 12px solid transparent;
+    z-index: 1;
+}
+
+/*adds border to arrow*/
+.triangle {
+    position: absolute;
+    display: block;
+    z-index: 1;
+    top: -9px;
+    left: 174px;
+    width: 16px;
+    height: 16px;
+    background-color: transparent;
+    border-top: 1px solid red;
+    border-left: 1px solid red;
+    transform: rotate(45deg);
+}
+
