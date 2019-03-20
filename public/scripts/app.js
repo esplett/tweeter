@@ -56,11 +56,22 @@ $(document).ready(function() {
   $( "form" ).on( "submit", function( event ) {
     event.preventDefault();
     var tweetText = $("textarea").val();
+    var errorBox = $(".error-message")
+    var errorText = $(".error-text")
     if (tweetText === "") {
-      alert("ERROR!!!!!!!!! Please enter text.");
+      errorText.text(function() {
+        return "ERROR!!! Please write your tweet.";
+      })
+      errorBox.slideDown('slow');
+      return null;
     } else if (tweetText.length >= 140) {
-      alert("ERROR!!!!!! Please enter less than 140 characters");
+      errorText.text(function() {
+        return "ERROR!!! Please enter less than 140 characters.";
+      })
+      errorBox.slideDown('slow');
+      return null;
     } else {
+      errorBox.slideUp()
       //serializes tweets
       $.ajax('/tweets', { method: 'POST', data: $( this ).serialize() })
       .then(function (){

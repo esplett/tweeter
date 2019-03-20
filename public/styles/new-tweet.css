@@ -37,6 +37,7 @@
   }
 
 .error-message {
+  display:none;
   position: relative;
   width: 85%;
   margin: 0 auto;
@@ -51,31 +52,34 @@
 
 /*add an arrow*/
 .error-message::before {
-    content: "";
-    position: absolute;
-    display: block;
-    top: -11px;
-    left: 170px;
-    width: 0;
-    height: 0;
-    border-bottom: 12px solid #FF9D9D;
-    border-right: 12px solid transparent;
-    border-left: 12px solid transparent;
-    z-index: 1;
+  content: "";
+  position: absolute;
+  display: block;
+  top: -11px;
+  left: 170px;
+  width: 0;
+  height: 0;
+  border-bottom: 12px solid #FF9D9D;
+  border-right: 12px solid transparent;
+  border-left: 12px solid transparent;
+  z-index: 1;
 }
 
 /*adds border to arrow*/
 .triangle {
-    position: absolute;
-    display: block;
-    z-index: 1;
-    top: -9px;
-    left: 174px;
-    width: 16px;
-    height: 16px;
-    background-color: transparent;
-    border-top: 1px solid red;
-    border-left: 1px solid red;
-    transform: rotate(45deg);
+  position: absolute;
+  display: block;
+  z-index: 1;
+  top: -9px;
+  left: 174px;
+  width: 16px;
+  height: 16px;
+  background-color: transparent;
+  border-top: 1px solid red;
+  border-left: 1px solid red;
+  transform: rotate(45deg);
 }
 
+.error-text {
+  padding: 0px 0px 0px 44px;
+}
