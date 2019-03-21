@@ -6,9 +6,9 @@ My design inspiration is Alfred Hitchcock's 'The Birds', which adds a spooky, go
 
 ## Final Product
 
-!["screenshot of the main page"](https://github.com/esplett/tweeter/blob/master/docs/Main_Page.png?raw=true)
-!["screenshot of the compose tweet box"](https://github.com/esplett/tweeter/blob/master/docs/Compose_Tweets.png?raw=true)
-!["screenshot of an error message"](https://github.com/esplett/tweeter/blob/master/docs/Error_Message.png?raw=true)
+!["screenshot of the main page"](https://github.com/esplett/tweeter/blob/master/docs/tweets.png?raw=true)
+!["screenshot of the hover effect"](https://github.com/esplett/tweeter/blob/master/docs/hover.png?raw=true)
+!["screenshot of an error message"](https://github.com/esplett/tweeter/blob/master/docs/error.png?raw=true)
 
 ## Getting Started
 
