@@ -58,6 +58,7 @@ $(document).ready(function() {
     var tweetText = $("textarea").val();
     var errorBox = $(".error-message")
     var errorText = $(".error-text")
+
     if (tweetText === "") {
       errorText.text(function() {
         return "ERROR!!! Please write your tweet.";
@@ -75,7 +76,10 @@ $(document).ready(function() {
       //serializes tweets
       $.ajax('/tweets', { method: 'POST', data: $( this ).serialize() })
       .then(function (){
-      loadTweets();
+        loadTweets();
+        // //clears text area and resets counter
+        $("textarea").val("")
+        $(".counter").html(140)
       });
     }
   });
