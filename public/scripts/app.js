@@ -75,7 +75,7 @@ $(document).ready(function() {
       //serializes tweets
       $.ajax('/tweets', { method: 'POST', data: $( this ).serialize() })
       .then(function (){
-        loadTweets();
+      loadTweets();
       });
     }
   });
