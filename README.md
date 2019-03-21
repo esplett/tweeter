@@ -4,7 +4,7 @@ Tweeter is a simple, single-page Twitter clone I built using HTML, CSS, JS, jQue
 
 My design inspiration is Alfred Hitchcock's 'The Birds', which adds a spooky, gothic twist to Tweeter.
 
-## Final Product
+## Screenshots
 
 !["screenshot of the main page"](https://github.com/esplett/tweeter/blob/master/docs/tweets.png?raw=true)
 !["screenshot of the hover effect"](https://github.com/esplett/tweeter/blob/master/docs/hover.png?raw=true)
