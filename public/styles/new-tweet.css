@@ -1,14 +1,14 @@
 
 .container .new-tweet {
-  background-color: #eee;
+  background-color: #bdb3bb;
   /*top/bottom left/right*/
   margin: 0 2em;
   /*top, right, bottom, left */
   padding: 3em 1em 1em 1em;
   border-radius: 9px;
-  border: 1.5px solid #d6d6d6;
+  border: 1.5px solid #717171d4;
   display: none;
-  }
+}
 
 .new-tweet h2 {
   margin: auto;
@@ -16,25 +16,25 @@
   border-bottom: solid;
   border-bottom-width: 1px;
   display: block;
-  }
+}
 
 .new-tweet textarea {
   /*top, right, bottom, left */
   padding: 0.5em 2em 1em 0.5em;
   width: 100%;
   margin-top: 23px;
-  }
+}
 
 .new-tweet .counter {
   float: right;
   font-style: italic;
   padding-right: 0.75em;
-  }
+}
 
 /*counter error*/
-.red {
+  .red {
   color: red;
-  }
+}
 
 .error-message {
   display:none;
