@@ -1,6 +1,6 @@
 # Tweeter Project
 
-Tweeter is a simple, single-page Twitter clone I built using HTML, CSS, JS, jQuery and AJAX on the front-end, and Node, Express and MongoDB on the back-end.
+Tweeter is a simple, single-page Twitter clone I built using HTML, CSS, JS, jQuery and AJAX on the front-end, and Node, Express and MongoDB on the back-end. I used the app Moment to keep track of the date and times when each tweet is posted.
 
 My design inspiration is Alfred Hitchcock's 'The Birds', which adds a spooky, gothic twist to Tweeter.
 
@@ -23,4 +23,5 @@ My design inspiration is Alfred Hitchcock's 'The Birds', which adds a spooky, go
 - Md5
 - Mongodb
 - Express
+- Moment
 - Node 5.10.x or above
