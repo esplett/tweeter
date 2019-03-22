@@ -1,0 +1,142 @@
+/*
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * https://css-tricks.com/international-box-sizing-awareness-day/
+ * Do not modify these two selectors, please
+ */
+
+$dark-grey: #656565;
+
+%flex-start {
+  display: flex;
+  align-items: flex-start;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*
+ * Global layout stuff
+ */
+
+body {
+  margin: 0;
+  background: url('/images/birds.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.container {
+  padding-top: 140px;
+  margin: auto;
+  width: 450px;
+  background-color: #ffffffbd;
+  min-height: 100%;
+}
+
+#tweets-container {
+  height: 100%;
+}
+
+.tweet {
+  margin: 2em 2em;
+  /*top, right, bottom, left */
+  padding: 0 0 0.75em 0;
+  background-color: white;
+  border-radius: 9px;
+  border: 1.5px solid #d6d6d6;
+    &:hover {
+      border: 2px solid #717171d4;
+        header {
+          background-color: #bdb3bb;
+            .handle {
+              color: black;
+            }
+            img {
+              opacity: 1.5;
+            }
+            h2 {
+              color: black;
+            }
+        }
+            footer .icons {
+              display: flex;
+              color: #00d8ff;
+            }
+    }
+
+    header {
+      @extend %flex-start;
+      justify-content: space-between;
+      margin: 0 auto;
+      /*top, right, bottom, left */
+      padding: 10px 0 60px 0;
+      background-color: #e6d8e3;
+      width: 100%;
+      height: 3em;
+      clear: both;
+      border-top-left-radius: 7px;
+      border-top-right-radius: 7px;
+
+      .logo {
+        @extend %flex-start;
+        padding: 0em 0em 0em 0.75em;
+      }
+
+      img {
+        height: 50px;
+        width: 50px;
+        border-radius: 7px;
+        opacity: 0.75;
+      }
+
+      h2 {
+        margin: 0 0 0 0.5em;
+        color: $dark-grey;
+      }
+
+      .clearfix {
+        clear: both;
+      }
+
+      .handle {
+        padding: 0em 0.5em 0em 1em;
+        color: $dark-grey;
+      }
+
+    }
+
+    .tweet-text {
+      margin: 0 auto;
+      /*top, right, bottom, left */
+      padding: 3em 1em 3em 1em;
+      width: 100%;
+    }
+
+    footer {
+      @extend %flex-start;
+      justify-content: space-between;
+      margin: 0 auto;
+      border-top: 1px solid #d6d6d6;
+
+      .footer-text {
+        display: flex;
+        align-items: flex-start;
+        padding: 0.75em 1em 0 1em;
+      }
+
+      .fa {
+        padding: 0 3px 0 3px;
+      }
+
+      .icons {
+        display: none;
+        padding: 1em 1em 0 0;
+      }
+    }
+}
+

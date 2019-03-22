@@ -1,3 +1,4 @@
+$salmon: #FF9D9D;
 
 .container .new-tweet {
   background-color: #bdb3bb;
@@ -46,7 +47,7 @@
   padding: 2em 0em 2em 0em;
   border: 1px solid red;
   border-radius: 40px;
-  background-color: #FF9D9D;
+  background-color: $salmon;
   color: red;
 }
 
@@ -59,7 +60,7 @@
   left: 170px;
   width: 0;
   height: 0;
-  border-bottom: 12px solid #FF9D9D;
+  border-bottom: 12px solid $salmon;
   border-right: 12px solid transparent;
   border-left: 12px solid transparent;
   z-index: 1;

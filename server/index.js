@@ -6,8 +6,21 @@ const PORT          = 8080;
 const express       = require("express");
 const bodyParser    = require("body-parser");
 const app           = express();
+var sassMiddleware = require('node-sass-middleware');
+const path = require('path');
 
 app.use(bodyParser.urlencoded({ extended: true }));
+
+// adding the sass middleware
+var srcPath = __dirname + '/scss';
+var destPath = __dirname + '/../public';
+
+app.use(sassMiddleware({
+  src: srcPath,
+  dest: destPath,
+  debug: true,
+  outputStyle: 'compressed',
+}));
 app.use(express.static("public"));
 
 //Connect to Mongo and pass the Mongo db into data helpers
