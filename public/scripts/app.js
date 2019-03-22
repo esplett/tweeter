@@ -33,7 +33,7 @@ $(document).ready(function() {
         </div>
         <footer>
           <div class="footer-text">
-             ${tweetData.created_at}
+            ${moment(tweetData.created_at).fromNow()}
           </div>
           <div class="icons">
             <i class="fa fa-flag" aria-hidden="true"></i>
@@ -47,7 +47,7 @@ $(document).ready(function() {
 
   //prevents XSS/Cross-Site Scripting
   function escape(str) {
-    var div = document.createElement('div');
+    let div = document.createElement('div');
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   }
@@ -55,10 +55,9 @@ $(document).ready(function() {
   //AJAX POST request
   $( "form" ).on( "submit", function( event ) {
     event.preventDefault();
-    var tweetText = $("textarea").val();
-    var errorBox = $(".error-message");
-    var errorText = $(".error-text");
-
+    let tweetText = $("textarea").val();
+    let errorBox = $(".error-message");
+    let errorText = $(".error-text");
     if (tweetText === "") {
       errorText.text(function() {
         return "ERROR!!! Please write your tweet.";
@@ -72,14 +71,14 @@ $(document).ready(function() {
       errorBox.slideDown('slow');
       return null;
     } else {
-      errorBox.slideUp()
+      errorBox.slideUp();
       //serializes tweets
       $.ajax('/tweets', { method: 'POST', data: $( this ).serialize() })
       .then(function (){
         loadTweets();
         // //clears text area and resets counter
-        $("textarea").val("")
-        $(".counter").html(140)
+        $("textarea").val("");
+        $(".counter").html(140);
       });
     }
   });
