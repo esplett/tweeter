@@ -4,9 +4,6 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-
-$(document).ready(function() {
-
   function renderTweets(tweets) {
     $('#tweets-container').empty();
       tweets.reverse().forEach(function(tweet){
@@ -52,7 +49,35 @@ $(document).ready(function() {
     return div.innerHTML;
   }
 
-  //AJAX POST request
+
+  function likeTweet (id, callback) {
+
+  }
+
+  //AJAX GET request for New Tweets
+  function loadTweets() {
+   $.ajax('/tweets', { method: 'GET' })
+    .then(function (tweets) {
+      renderTweets(tweets);
+      $(".fa fa-heart").on("click", function() {
+        $.ajax('/tweets', { method: 'POST', data: $( this ) })
+          .then(function (tweet){
+          loadTweets();
+          var heart = document.createElement(".fa fa-heart");
+          $( heart ).data( "tweet", { liked: 0 } );
+          liked ++;
+          console.log("liked: ", liked)
+        });
+    });
+      console.log(tweets);
+    });
+  }
+
+
+//loads after CSS and HTML
+$(document).ready(function() {
+
+  //AJAX POST request for Compose Tweet
   $( "form" ).on( "submit", function( event ) {
     event.preventDefault();
     let tweetText = $("textarea").val();
@@ -83,14 +108,6 @@ $(document).ready(function() {
     }
   });
 
-  //AJAX GET request
-  function loadTweets() {
-   $.ajax('/tweets', { method: 'GET' })
-    .then(function (tweets) {
-     renderTweets(tweets);
-     console.log(tweets);
-    });
-  }
 
   loadTweets();
 
@@ -99,7 +116,6 @@ $(document).ready(function() {
     $(".new-tweet").slideToggle('slow');
     $(".new-tweet textarea").focus();
   });
-
 
 });
 
